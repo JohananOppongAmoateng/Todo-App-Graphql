@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "TodoApp",
+    "graphene_django",
 ]
 
 MIDDLEWARE = [
@@ -51,6 +53,9 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "TodoAppGraphql.urls"
 
+GRAPHENE = {
+    "SCHEMA":"TodoApp.schema.schema"
+}
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
